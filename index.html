@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.css">
+    <style>
+        .textbox
+        {
+            height: 400px;
+            border: solid 1px;
+            overflow-y: auto;
+        }
+    </style>
+</head>
+<body>
+<div class="container-fluid">
+
+    <div class="row">
+        <h1>Normal</h1>
+        <div class="col-sm-12 col-md-6">
+            <form class="form-horizontal col-xs-12">
+                <div class="col-xs-12 col-md-6">
+                    <label for="max1">User size: </label>
+                    <input id="max1" class="form-control" value="100"
+                           type="number" min="1">
+                </div>
+                <div class="col-xs-12 col-md-6">
+                    <label for="want1">people want: </label>
+                    <input id="want1" class="form-control" value="5" type="number" min="0" max="100">
+                </div>
+                <div class="col-xs-12 col-md-6">
+                    <label for="discount">min threshold: %</label>
+                    <input id="discount" class="form-control" value="5" type="number" min="0" max="20">
+                </div>
+                <div class="col-xs-12">
+                    <input id="giveFirst" type="checkbox" >
+                    <label for="giveFirst">If any user want rise moeny, must give first</label>
+                </div>
+                <div class="col-xs-12">
+                    <a class="btn btn-default" onclick="init()">OK</a>
+                    <a id="runBtn" class="btn btn-success pull-right" onclick="run()">Run</a>
+                    <a class="btn btn-default" onclick="clearCanvas()">Clear</a>
+                </div>
+            </form>
+            <div class="col-xs-12" id="settings">
+            </div>
+            <div class="col-xs-12 textbox">
+                <p id="appliedUser"></p>
+            </div>
+            <div>
+
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-6">
+            <canvas id="canvas1" width="600" height="600" style="border:1px solid #000000;">
+            </canvas>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/main.js"></script>
+</html>
